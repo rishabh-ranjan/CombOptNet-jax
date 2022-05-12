@@ -24,6 +24,7 @@ class CombOptNetModule(torch.nn.Module):
         tau=None,
         clip_gradients_to_box=True,
         use_canonical_basis=False,
+        num_threads=1,
     ):
         super().__init__()
         """
@@ -38,6 +39,7 @@ class CombOptNetModule(torch.nn.Module):
             clip_gradients_to_box=clip_gradients_to_box,
             use_canonical_basis=use_canonical_basis,
             parallel_processing=ParallelProcessing(),
+            num_threads=num_threads,
         )
         self.solver = DifferentiableILPsolver
 
@@ -79,6 +81,7 @@ class DifferentiableILPsolver(torch.autograd.Function):
         device = constraints.device
         maybe_parallelize = params["parallel_processing"].maybe_parallelize
 
+        static_args = {**params["variable_range"], "num_threads": params["num_threads"]}
         dynamic_args = [
             {"cost_vector": cost_vector, "constraints": const}
             for cost_vector, const in zip(
@@ -86,7 +89,7 @@ class DifferentiableILPsolver(torch.autograd.Function):
             )
         ]
 
-        result = maybe_parallelize(ilp_solver, params["variable_range"], dynamic_args)
+        result = maybe_parallelize(ilp_solver, static_args, dynamic_args)
         y, infeasibility_indicator = [
             torch.from_numpy(np.array(res)).to(device) for res in zip(*result)
         ]
@@ -129,7 +132,7 @@ class DifferentiableILPsolver(torch.autograd.Function):
         return cost_vector_grad, constraints_gradient, None
 
 
-def ilp_solver(cost_vector, constraints, lb, ub):
+def ilp_solver(cost_vector, constraints, lb, ub, num_threads=1):
     """
     ILP solver using Gurobi. Computes the solution of a single integer linear program
     y* = argmin_y (c * y) subject to A @ y + b <= 0, y integer, lb <= y <= ub
@@ -146,7 +149,7 @@ def ilp_solver(cost_vector, constraints, lb, ub):
 
     model = gp.Model("mip1")
     model.setParam("OutputFlag", 0)
-    # model.setParam("Threads", 1)
+    model.setParam("Threads", num_threads)
 
     variables = [
         model.addVar(lb=lb, ub=ub, vtype=GRB.INTEGER, name="v" + str(i))
