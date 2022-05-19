@@ -1,0 +1,66 @@
+WARNING:absl:No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+LLVM ERROR: pthread_create failed: Resource temporarily unavailable
+*** SIGABRT received at time=1652928744 on cpu 51 ***
+PC: @     0x7f511cbad428  (unknown)  raise
+    @     0x7f511cf53390       3904  (unknown)
+    @     0x7f50beb1dcb1         48  llvm::report_fatal_error()
+    @     0x7f50beaaf100         96  ReportErrnumFatal()
+    @     0x7f50beaaf2f8        128  llvm::llvm_execute_on_thread_impl()
+    @     0x7f50beaaf79d         48  llvm::thread::thread<>()
+    @     0x7f50beab1871        144  llvm::ThreadPool::ThreadPool()
+    @     0x7f50be9c774f        496  mlir::MLIRContext::MLIRContext()
+    @     0x7f50be9c7a19        160  mlir::MLIRContext::MLIRContext()
+    @     0x7f50bc69d0cc       2528  xla::cpu::CpuCompiler::RunBackend()
+    @     0x7f50bc68957a       4432  xla::TfrtCpuClient::Compile()
+    @     0x7f50bc5c82b5        976  xla::PyClient::Compile()
+    @     0x7f50bc332b5c       1632  pybind11::detail::argument_loader<>::call_impl<>()
+    @     0x7f50bc333434        192  pybind11::cpp_function::initialize<>()::{lambda()#3}::_FUN()
+    @     0x7f50bc314821        544  pybind11::cpp_function::dispatcher()
+    @     0x5648ac855562  1188726072  _PyCFunction_FastCallDict
+    @     0x5648ac9c5660  (unknown)  (unknown)
+[2022-05-19 08:22:24,158 E 75765 97117] logging.cc:325: *** SIGABRT received at time=1652928744 on cpu 51 ***
+[2022-05-19 08:22:24,159 E 75765 97117] logging.cc:325: PC: @     0x7f511cbad428  (unknown)  raise
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f511cf53390       3904  (unknown)
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f50beb1dcb1         48  llvm::report_fatal_error()
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f50beaaf100         96  ReportErrnumFatal()
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f50beaaf2f8        128  llvm::llvm_execute_on_thread_impl()
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f50beaaf79d         48  llvm::thread::thread<>()
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f50beab1871        144  llvm::ThreadPool::ThreadPool()
+[2022-05-19 08:22:24,161 E 75765 97117] logging.cc:325:     @     0x7f50be9c774f        496  mlir::MLIRContext::MLIRContext()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50be9c7a19        160  mlir::MLIRContext::MLIRContext()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50bc69d0cc       2528  xla::cpu::CpuCompiler::RunBackend()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50bc68957a       4432  xla::TfrtCpuClient::Compile()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50bc5c82b5        976  xla::PyClient::Compile()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50bc332b5c       1632  pybind11::detail::argument_loader<>::call_impl<>()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50bc333434        192  pybind11::cpp_function::initialize<>()::{lambda()#3}::_FUN()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x7f50bc314821        544  pybind11::cpp_function::dispatcher()
+[2022-05-19 08:22:24,162 E 75765 97117] logging.cc:325:     @     0x5648ac855562  1188726072  _PyCFunction_FastCallDict
+[2022-05-19 08:22:24,166 E 75765 97117] logging.cc:325:     @     0x5648ac9c5660  (unknown)  (unknown)
+Fatal Python error: Aborted
+
+Stack (most recent call first):
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/interpreters/xla.py", line 360 in backend_compile
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/interpreters/xla.py", line 297 in xla_primitive_callable
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/util.py", line 179 in cached
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/util.py", line 186 in wrapper
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/interpreters/xla.py", line 248 in apply_primitive
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/core.py", line 603 in process_primitive
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/core.py", line 264 in bind
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/lax/lax.py", line 1613 in broadcasted_iota
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/numpy/lax_numpy.py", line 4643 in argsort
+  File "/home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/utils/comboptnet_utils.py", line 51 in compute_delta_y
+  File "/home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py", line 222 in mismatch_function
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/linear_util.py", line 166 in call_wrapped
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/interpreters/partial_eval.py", line 505 in trace_to_jaxpr
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/interpreters/ad.py", line 102 in linearize
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/interpreters/ad.py", line 115 in vjp
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/api.py", line 1997 in _vjp
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/api.py", line 901 in value_and_grad_f
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/traceback_util.py", line 183 in reraise_with_filtered_traceback
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/api.py", line 829 in grad_f
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/jax/_src/traceback_util.py", line 183 in reraise_with_filtered_traceback
+  File "/home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py", line 123 in backward
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/torch/autograd/function.py", line 77 in apply
+Command terminated by signal 6
+5.60user 2.98system 0:31.80elapsed 27%CPU (0avgtext+0avgdata 1976504maxresident)k
+1888inputs+48outputs (0major+338418minor)pagefaults 0swaps

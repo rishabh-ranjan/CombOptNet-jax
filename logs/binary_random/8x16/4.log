@@ -1,0 +1,17 @@
+[2m[36m(ilp_solver pid=18941)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18941)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18917)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18917)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18912)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18912)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18902)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18902)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18931)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18931)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18936)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18936)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18922)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18922)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+[2m[36m(ilp_solver pid=18927)[0m /home/rishabh/btp/src/CombOptNet/ext/CombOptNetJAX/models/comboptnet.py:169: UserWarning: Infeasible ILP encountered. Dummy solution should be handled as special case.
+[2m[36m(ilp_solver pid=18927)[0m   f"Infeasible ILP encountered. Dummy solution should be handled as special case."
+WARNING:absl:No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)

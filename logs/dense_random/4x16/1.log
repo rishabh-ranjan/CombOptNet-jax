@@ -1,0 +1,8 @@
+*** SIGTERM received at time=1652928974 on cpu 58 ***
+PC: @     0x7fc2495e7827  (unknown)  do_futex_wait.constprop.3
+    @     0x7fc2495e9390  (unknown)  (unknown)
+    @ 0x636f6c6c00000000  (unknown)  (unknown)
+[2022-05-19 08:26:14,890 E 75761 75761] logging.cc:325: *** SIGTERM received at time=1652928974 on cpu 58 ***
+[2022-05-19 08:26:14,890 E 75761 75761] logging.cc:325: PC: @     0x7fc2495e7827  (unknown)  do_futex_wait.constprop.3
+[2022-05-19 08:26:14,892 E 75761 75761] logging.cc:325:     @     0x7fc2495e9390  (unknown)  (unknown)
+[2022-05-19 08:26:14,896 E 75761 75761] logging.cc:325:     @ 0x636f6c6c00000000  (unknown)  (unknown)

@@ -1,0 +1,19 @@
+*** SIGABRT received at time=1652928720 on cpu 59 ***
+PC: @     0x7f30da6f5428  (unknown)  raise
+    @     0x7f30daa9b390  (unknown)  (unknown)
+    @     0x7f30d8bb7580  (unknown)  (unknown)
+[2022-05-19 08:22:00,726 E 75762 75762] logging.cc:325: *** SIGABRT received at time=1652928720 on cpu 59 ***
+[2022-05-19 08:22:00,726 E 75762 75762] logging.cc:325: PC: @     0x7f30da6f5428  (unknown)  raise
+[2022-05-19 08:22:00,726 E 75762 75762] logging.cc:325:     @     0x7f30daa9b390  (unknown)  (unknown)
+[2022-05-19 08:22:00,727 E 75762 75762] logging.cc:325:     @     0x7f30d8bb7580  (unknown)  (unknown)
+Fatal Python error: Aborted
+
+Stack (most recent call first):
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/ray/worker.py", line 1571 in connect
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/ray/worker.py", line 1083 in init
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/ray/_private/client_mode_hook.py", line 105 in wrapper
+  File "./main.py", line 29 in main
+  File "./main.py", line 65 in <module>
+Command terminated by signal 6
+1.88user 0.18system 0:07.20elapsed 28%CPU (0avgtext+0avgdata 288768maxresident)k
+8inputs+40outputs (0major+42679minor)pagefaults 0swaps

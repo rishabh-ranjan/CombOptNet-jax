@@ -1,0 +1,6 @@
+*** SIGTERM received at time=1652928977 on cpu 7 ***
+PC: @     0x7f37f7d0287f  (unknown)  recv
+    @     0x7f37f7d03390  (unknown)  (unknown)
+[2022-05-19 08:26:17,945 E 75764 75764] logging.cc:325: *** SIGTERM received at time=1652928977 on cpu 7 ***
+[2022-05-19 08:26:17,945 E 75764 75764] logging.cc:325: PC: @     0x7f37f7d0287f  (unknown)  recv
+[2022-05-19 08:26:17,945 E 75764 75764] logging.cc:325:     @     0x7f37f7d03390  (unknown)  (unknown)

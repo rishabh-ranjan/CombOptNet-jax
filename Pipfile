@@ -1,7 +1,12 @@
 [[source]]
 name = "pypi"
 url = "https://pypi.org/simple"
-verify_ssl = true
+verify_ssl = false
+
+[[source]]
+name = "gurobi"
+url = "https://pypi.gurobi.com"
+verify_ssl = false
 
 [dev-packages]
 
@@ -13,6 +18,10 @@ jax = ">=0.2.8"
 jaxlib = ">=0.1.58"
 cvxpy = "*"
 cvxpylayers = "*"
+
+gurobipy = { version = "*", index = "gurobi" }
+
+smart-settings = { git = "https://github.com/martius-lab/smart-settings.git" }
 
 
 [requires]

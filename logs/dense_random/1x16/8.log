@@ -1,0 +1,47 @@
+WARNING:absl:No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+*** SIGTERM received at time=1652928774 on cpu 9 ***
+PC: @           0x55e2d5  (unknown)  PyObject_GetAttr
+    @     0x7fdf8f201f10  (unknown)  (unknown)
+    @           0x9d12c0  (unknown)  (unknown)
+[2022-05-19 08:22:54,864 E 17241 17241] logging.cc:325: *** SIGTERM received at time=1652928774 on cpu 9 ***
+[2022-05-19 08:22:54,868 E 17241 17241] logging.cc:325: PC: @           0x55e2d5  (unknown)  PyObject_GetAttr
+[2022-05-19 08:22:54,871 E 17241 17241] logging.cc:325:     @     0x7fdf8f201f10  (unknown)  (unknown)
+[2022-05-19 08:22:54,875 E 17241 17241] logging.cc:325:     @           0x9d12c0  (unknown)  (unknown)
+2022-05-19 08:22:54,877	WARNING worker.py:1382 -- The autoscaler failed with the following error:
+Terminated with signal 15
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/ray/autoscaler/_private/monitor.py", line 607, in <module>
+    monitor.run()
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/ray/autoscaler/_private/monitor.py", line 484, in run
+    self._run()
+  File "/home/rishabh/.local/share/virtualenvs/CombOptNetJAX-wSKOtHoc/lib/python3.6/site-packages/ray/autoscaler/_private/monitor.py", line 388, in _run
+    time.sleep(AUTOSCALER_UPDATE_INTERVAL_S)
+
+Successfully loaded Static Constraints dataset.
+Number of distinct solutions in train set: 1585
+Number of distinct solutions in test set: 997
+[2m[36m(ilp_solver pid=18074)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18074)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18076)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18076)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18077)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18077)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18042)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18042)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18045)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18045)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18039)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18039)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18069)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18069)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18055)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18055)[0m Using license file /home/rishabh/gurobi.lic
+Evaluation:: Loss: 0.1058, Perfect acc: 0.0800
+Epoch:  1, Train loss: 0.1068, Perfect acc: 0.0887
+Epoch:  2, Train loss: 0.0905, Perfect acc: 0.1325
+Epoch:  3, Train loss: 0.0798, Perfect acc: 0.1663
+Epoch:  4, Train loss: 0.0720, Perfect acc: 0.2044
+Epoch:  5, Train loss: 0.0660, Perfect acc: 0.2313
+Epoch:  6, Train loss: 0.0616, Perfect acc: 0.2562
+Epoch:  7, Train loss: 0.0580, Perfect acc: 0.2812
+Epoch:  8, Train loss: 0.0551, Perfect acc: 0.3106
+Epoch:  9, Train loss: 0.0523, Perfect acc: 0.3306

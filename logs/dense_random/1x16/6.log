@@ -1,0 +1,38 @@
+WARNING:absl:No GPU/TPU found, falling back to CPU. (Set TF_CPP_MIN_LOG_LEVEL=0 and rerun for more info.)
+*** SIGTERM received at time=1652928774 on cpu 3 ***
+PC: @     0x7f0cf9801ad3  (unknown)  pthread_cond_wait@@GLIBC_2.3.2
+    @     0x7f0cf9a51f10  (unknown)  (unknown)
+[2022-05-19 08:22:54,842 E 17237 17237] logging.cc:325: *** SIGTERM received at time=1652928774 on cpu 3 ***
+[2022-05-19 08:22:54,842 E 17237 17237] logging.cc:325: PC: @     0x7f0cf9801ad3  (unknown)  pthread_cond_wait@@GLIBC_2.3.2
+[2022-05-19 08:22:54,842 E 17237 17237] logging.cc:325:     @     0x7f0cf9a51f10  (unknown)  (unknown)
+Successfully loaded Static Constraints dataset.
+Number of distinct solutions in train set: 1586
+Number of distinct solutions in test set: 994
+[2m[36m(ilp_solver pid=18008)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18008)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18004)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18004)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18002)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18002)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18010)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18010)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18011)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18011)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18003)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18003)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18014)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18014)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=18006)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=18006)[0m Using license file /home/rishabh/gurobi.lic
+[2m[36m(ilp_solver pid=19112)[0m Academic license - for non-commercial use only - expires 2022-09-01
+[2m[36m(ilp_solver pid=19112)[0m Using license file /home/rishabh/gurobi.lic
+Evaluation:: Loss: 0.0845, Perfect acc: 0.1860
+Epoch:  1, Train loss: 0.0783, Perfect acc: 0.2206
+Epoch:  2, Train loss: 0.0698, Perfect acc: 0.2575
+Epoch:  3, Train loss: 0.0630, Perfect acc: 0.2825
+Epoch:  4, Train loss: 0.0575, Perfect acc: 0.3150
+Epoch:  5, Train loss: 0.0522, Perfect acc: 0.3394
+Epoch:  6, Train loss: 0.0466, Perfect acc: 0.3544
+Epoch:  7, Train loss: 0.0411, Perfect acc: 0.3738
+Epoch:  8, Train loss: 0.0347, Perfect acc: 0.3900
+Epoch:  9, Train loss: 0.0285, Perfect acc: 0.4088

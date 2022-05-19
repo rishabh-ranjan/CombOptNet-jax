@@ -1,1 +1,4 @@
+datasets
+Pipfile.lock
 __pycache__
+.fuse_hidden*
