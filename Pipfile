@@ -25,4 +25,4 @@ smart-settings = { git = "https://github.com/martius-lab/smart-settings.git" }
 
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
