@@ -26,7 +26,7 @@ def main(
     trainer_params,
 ):
     if use_ray:
-        ray.init(**ray_params)
+        ray.init(runtime_env={"pip":"requirements.txt"}, **ray_params)
 
     (train_iterator, test_iterator), metadata = load_dataset(**data_params)
     trainer = get_trainer(
